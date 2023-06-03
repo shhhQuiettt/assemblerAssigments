@@ -12,7 +12,7 @@ section .data
 
 section .bss
     input   resb 1024
-	output  resd 1024
+	output  resb 1024
 
 section .text
 
