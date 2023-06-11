@@ -1,0 +1,17 @@
+bits    64
+default rel
+
+global main
+
+section .data
+    memory_operand dq 2.5, 3.7, 1.2, 4.9  ; example memory operand
+
+section .text
+    global _start
+
+main:
+    ; Load memory operand into xmm0
+    movapd xmm0, [memory_operand]
+
+    ; Perform addition with xmm0
+    addpd xmm0, [memory_operand]
